@@ -80,7 +80,7 @@ dependencies {
     compile 'org.grails.plugins:grails-console:2.1.1'
     
     compile 'org.grails.plugins:postgresql-extensions:5.2.0'
-    runtime 'org.postgresql:postgresql:42.1.1'
+    //runtime 'org.postgresql:postgresql:42.1.1'
     
     compile group: 'org.apache.activemq', name: 'activemq-camel', version:"${activeMQVersion}"
     
@@ -95,13 +95,6 @@ dependencies {
     compile group: 'org.apache.camel', name: 'camel-swagger-java', version:"${camelVersion}"
     //compile group: 'org.apache.camel', name: 'camel-http4', version:"${camelVersion}"
     //compile group: 'org.apache.camel', name: 'camel-netty4-http', version:"${camelVersion}"
-
-
-    compile group: 'org.keycloak', name: 'keycloak-authz-client', version: '3.4.3.Final'
-    
-    // compile "org.flywaydb:flyway-core:4.1.2"
-    compile "org.flywaydb:flyway-core:5.0.7"
-
 
 }
 

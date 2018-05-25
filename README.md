@@ -23,6 +23,8 @@ export AMQ_PASS=mqpass
 
 ## In grails web console:
 
+http://localhost:9080/console#new
+
 ```
 import com.microservice.dtos.*
 

@@ -36,3 +36,16 @@ println "$logMessage"
 ```
 
 
+```
+
+com.microservice.routes.LogProducerConsumerRouteBuilder.batchProducerSize = 1
+
+synchronized(com.microservice.ProducerConsumerService?.inflightInstances) {
+println "${com.microservice.ProducerConsumerService?.inflightInstances?.toString()}"
+
+com.microservice.ProducerConsumerService?.inflightInstances?.size()
+}
+
+```
+
+

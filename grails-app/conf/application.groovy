@@ -106,6 +106,8 @@ environments = [
 ]
 
 
+grails.plugin.console.csrfProtection.enabled = false
+
 
 
 

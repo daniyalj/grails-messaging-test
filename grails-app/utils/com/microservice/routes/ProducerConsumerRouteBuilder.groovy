@@ -24,9 +24,10 @@ class ProducerConsumerRouteBuilder extends RouteBuilder {
     
     void configure() {
         
-        from("timer:producer-timer?delay=1000&period=5000&fixedRate=true")
+        from("timer:producer-timer?delay=1000&period=500&fixedRate=true")
             .routeId('producer-timer')
-            .to('log:producer-timer')
+            //.to('log:producer-timer')
+            .setHeader('batchRecipientList', constant(''))
             .process { Exchange exchange ->
                     String targetRoute = 'direct:producer-create-instance'
                     String batchRecipientList = ''

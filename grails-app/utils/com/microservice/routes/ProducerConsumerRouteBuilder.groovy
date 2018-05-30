@@ -68,7 +68,7 @@ class ProducerConsumerRouteBuilder extends RouteBuilder {
                     LogMessage logMessage = exchange.in.getBody(LogMessage)
                     exchange.in.headers['resolveInstanceResult'] = producerConsumerService.resolveInstance(logMessage?.logMessageId)
                 }
-            .delay(200)
+            .delay(100)
 
     }
 }

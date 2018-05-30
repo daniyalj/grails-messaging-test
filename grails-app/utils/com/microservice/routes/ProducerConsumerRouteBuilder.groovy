@@ -14,7 +14,7 @@ class ProducerConsumerRouteBuilder extends RouteBuilder {
     
     static Integer MAX_PRODUCER_BATCH_SIZE = 50
     static Integer producerBatchSize = 10
-    static Integer maxConcurrentConsumers = 1
+    static Integer maxConcurrentConsumers = 20
     
     @Autowired
     ProducerTemplate producerTemplate

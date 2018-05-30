@@ -25,22 +25,14 @@ export AMQ_PASS=mqpass
 
 http://localhost:9080/console#new
 
-```
-import com.microservice.dtos.*
 
-def logService = ctx.logService
+*MAKE SURE TO CLEAR THE QUEUE*
 
-LogMessage logMessage = new LogMessage(['logMessage': 'Once upon a time...'])
 
-logMessage = logMessage.createLogMessage(logMessage)
-
-println "$logMessage"
+kick off the load:
 ```
 
-
-```
-
-com.microservice.routes.ProducerConsumerRouteBuilder.producerBatchSize = 1
+com.microservice.routes.ProducerConsumerRouteBuilder.producerBatchSize = 100
 
 synchronized(com.microservice.ProducerConsumerService?.inflightInstances) {
 println "${com.microservice.ProducerConsumerService?.inflightInstances?.toString()}"
@@ -49,5 +41,23 @@ com.microservice.ProducerConsumerService?.inflightInstances?.size()
 }
 
 ```
+
+monitor:
+```
+
+synchronized(com.microservice.ProducerConsumerService?.inflightInstances) {
+com.microservice.ProducerConsumerService?.inflightInstances?.size()
+}
+
+```
+
+ramp down:
+```
+
+com.microservice.routes.ProducerConsumerRouteBuilder.producerBatchSize = 0
+
+synchronized(com.microservice.ProducerConsumerService?.inflightInstances) {
+com.microservice.ProducerConsumerService?.inflightInstances?.size()
+}
 
 

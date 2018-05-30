@@ -58,6 +58,7 @@ class ProducerConsumerRouteBuilder extends RouteBuilder {
         
         from('direct:producer-queue')
             .routeId('producer-queue')
+            .marshal().json(JsonLibrary.Jackson, LogMessage.class, true)
             .to("activemq:queue:${producerQueueName}")
         
         from("activemq:queue:${producerQueueName}?maxConcurrentConsumers=${maxConcurrentConsumers}")

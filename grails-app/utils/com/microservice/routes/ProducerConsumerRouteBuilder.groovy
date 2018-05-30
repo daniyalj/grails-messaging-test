@@ -41,7 +41,7 @@ class ProducerConsumerRouteBuilder extends RouteBuilder {
                     //exchange.in.setBody(batchRecipientList, String.class)
                     exchange.in.headers['batchRecipientList'] = batchRecipientList
                 }
-            .to("log:producer-timer?showHeaders=true")
+            //.to("log:producer-timer?showHeaders=true")
             //.recipientList(simple('${body}')).parallelProcessing()
             .recipientList( header('batchRecipientList'), ',' ).parallelProcessing()
 

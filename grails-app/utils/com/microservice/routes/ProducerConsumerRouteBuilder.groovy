@@ -50,7 +50,6 @@ class ProducerConsumerRouteBuilder extends RouteBuilder {
             .process { Exchange exchange ->
                     exchange.in.setBody(producerConsumerService.createInstance(), LogMessage.class)
                 }
-            .marshal().json(JsonLibrary.Jackson, LogMessage.class, true)
             .to("log:producer-create-instance")
             .to('direct:producer-queue')
         

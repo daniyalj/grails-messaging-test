@@ -19,7 +19,7 @@ class ConfigBeans {
     @Primary
     @Bean
     public ActiveMQConnectionFactory getConnectionFactory() {
-        String brokerURL = "tcp://${System.getenv('AMQ_HOST')?.trim() ?: '0.0.0.0'}:${System.getenv('AMQ_PORT')?.trim() ?: '61616'}"
+        String brokerURL = "tcp://172.30.167.19:61616"
         
         ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory();
         connectionFactory.setBrokerURL(brokerURL);

@@ -2,8 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.chassi.customer</groupId>
-    <artifactId>chassi-customer-core</artifactId>
+    <groupId>test.grails.messaging</groupId>
+    <artifactId>grails-messaging-test</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
     <properties>
@@ -11,8 +11,8 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <finalName>chassi-customer-core-1.0.jar</finalName>
-        <project.build.finalName>chassi-customer-core-1.0.jar</project.build.finalName>
+        <finalName>grails-messaging-test-1.0.jar</finalName>
+        <project.build.finalName>grails-messaging-test-1.0.jar</project.build.finalName>
     </properties>
 
     <pluginRepositories>
@@ -82,8 +82,8 @@
                                     <arg value="assemble"/>
                                 </exec>
                                 <exec executable="cp">
-                                    <arg value="build/libs/chassi-customer-core-1.0.jar" />
-                                    <arg value="/tmp/src/target/chassi-customer-core-1.0.jar" />
+                                    <arg value="build/libs/grails-messaging-test-1.0.jar" />
+                                    <arg value="/tmp/src/target/grails-messaging-test-1.0.jar" />
                                 </exec>
                             </target>
                         </configuration>
